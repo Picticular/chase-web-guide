@@ -4,16 +4,15 @@ import { motion, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
 import type React from 'react';
 
-import lit from '../../public/phone-step-03-lit.png';
-import minus from '../../public/phone-step-03-minus.png';
-import plus from '../../public/phone-step-03-plus.png';
-import poop from '../../public/phone-step-03-poop-shoot.png';
+import dmOrText from '../../../public/phone-step-04-dm-or-text.png';
+import trailers from '../../../public/phone-step-04-trailers.png';
+import weGotEm from '../../../public/phone-step-04-we-got-em.png';
 
 interface Props {
   scrollRef?: React.RefObject<HTMLDivElement | null>;
 }
 
-const Step04 = ({ scrollRef: ref }: Props) => {
+const Step05 = ({ scrollRef: ref }: Props) => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
@@ -38,13 +37,12 @@ const Step04 = ({ scrollRef: ref }: Props) => {
           viewport={{
             once: true,
             amount: 0.5,
-            root: ref,
           }}
         >
           <motion.div
             className="inline-block text-purple-500"
             initial={{
-              opacity: shouldReduceMotion ? 0 : 1,
+              opacity: shouldReduceMotion ? 1 : 0,
               scale: shouldReduceMotion ? 1 : 4,
             }}
             whileInView={{
@@ -63,35 +61,57 @@ const Step04 = ({ scrollRef: ref }: Props) => {
               root: ref,
             }}
           >
-            Swipe
+            Watch
           </motion.div>{' '}
-          Yay or Nay
-          <br />
-          On New &amp; Old
-          <br />
-          Titles...
-        </motion.div>
-        <div className="relative h-[65vh] w-auto pb-6 lg:h-[100%] lg:pb-0">
-          <StepImage
-            imgSrc={'/phone-step-03.png'}
-            altText={'Step 4 swipe phone image'}
-            direction={'right'}
-            className={'h-[100%] w-auto'}
-            isAbsolute={false}
-          />
+          Titles With
+          <span className="inline lg:block"> </span>A Click &amp;{' '}
           <motion.div
-            className="absolute top-0 left-0 h-auto w-2/3"
+            className="inline-block text-purple-500"
             initial={{
               opacity: shouldReduceMotion ? 1 : 0,
-              scale: shouldReduceMotion ? 1 : 0.5,
-              translateY: '-12%',
-              translateX: '14%',
+              scale: shouldReduceMotion ? 1 : 4,
             }}
             whileInView={{
               opacity: 1,
               scale: 1,
-              translateY: '-30.5%',
-              translateX: '1.75%',
+            }}
+            transition={{
+              type: 'spring',
+              stiffness: 200,
+              duration: 1,
+              delay: 1,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.5,
+              root: ref,
+            }}
+          >
+            Share
+          </motion.div>
+          <span className="inline lg:block"> </span>Favs with Friends
+        </motion.div>
+        <div className="relative h-[65vh] w-auto pb-6 lg:h-[100%] lg:pb-0">
+          <StepImage
+            imgSrc={'/phone-step-04.png'}
+            altText={'Step 5 watch and share phone image'}
+            direction={'left'}
+            className={'h-[100%] w-auto'}
+            isAbsolute={false}
+          />
+          <motion.div
+            className="absolute top-0 left-0 h-auto w-4/5"
+            initial={{
+              opacity: shouldReduceMotion ? 1 : 0,
+              scale: shouldReduceMotion ? 1 : 0.5,
+              translateY: shouldReduceMotion ? '150%' : '-115%',
+              translateX: shouldReduceMotion ? '-43%' : '-30%',
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              translateY: '150%',
+              translateX: '-43%',
             }}
             transition={{
               type: 'spring',
@@ -105,21 +125,21 @@ const Step04 = ({ scrollRef: ref }: Props) => {
               root: ref,
             }}
           >
-            <Image src={lit} alt="lit" className="h-auto w-full" />
+            <Image src={trailers} alt="Trailers" className="h-auto w-full" />
           </motion.div>
           <motion.div
-            className="absolute top-0 left-0 h-auto w-2/3"
+            className="absolute top-0 right-0 h-auto w-4/5"
             initial={{
               opacity: shouldReduceMotion ? 1 : 0,
               scale: shouldReduceMotion ? 1 : 0.5,
-              translateY: shouldReduceMotion ? '196%' : '-58%',
-              translateX: shouldReduceMotion ? '-26.5%' : '-27.75%',
+              translateY: shouldReduceMotion ? '144%' : '-41.5%',
+              translateX: shouldReduceMotion ? '30%' : '6.5%',
             }}
             whileInView={{
               opacity: 1,
               scale: 1,
-              translateY: '196%',
-              translateX: '-26.5%',
+              translateY: '144%',
+              translateX: '30%',
             }}
             transition={{
               type: 'spring',
@@ -133,21 +153,21 @@ const Step04 = ({ scrollRef: ref }: Props) => {
               root: ref,
             }}
           >
-            <Image src={minus} alt="minus" className="h-auto w-full" />
+            <Image src={dmOrText} alt="DM or Text" className="h-auto w-full" />
           </motion.div>
           <motion.div
-            className="absolute top-0 right-0 h-auto w-2/3"
+            className="absolute top-0 left-0 h-auto w-4/5"
             initial={{
               opacity: shouldReduceMotion ? 1 : 0,
               scale: shouldReduceMotion ? 1 : 0.5,
-              translateY: shouldReduceMotion ? '126%' : '-92.75%',
-              translateX: shouldReduceMotion ? '30.25%' : '30.85%',
+              translateY: shouldReduceMotion ? '250%' : '-41.5%',
+              translateX: shouldReduceMotion ? '-32.5%' : '6.5%',
             }}
             whileInView={{
               opacity: 1,
               scale: 1,
-              translateY: '126%',
-              translateX: '30.25%',
+              translateY: '250%',
+              translateX: '-32.5%',
             }}
             transition={{
               type: 'spring',
@@ -161,34 +181,7 @@ const Step04 = ({ scrollRef: ref }: Props) => {
               root: ref,
             }}
           >
-            <Image src={plus} alt="plus" className="h-auto w-full" />
-          </motion.div>
-          <motion.div
-            className="absolute top-0 left-0 h-auto w-2/3"
-            initial={{
-              opacity: shouldReduceMotion ? 1 : 0,
-              scale: shouldReduceMotion ? 1 : 0.5,
-              translateY: shouldReduceMotion ? '340%' : '-41.5%',
-              translateX: shouldReduceMotion ? '-13.75%' : '6.5%',
-            }}
-            whileInView={{
-              opacity: 1,
-              scale: 1,
-              translateY: '340%',
-              translateX: '-13.75%',
-            }}
-            transition={{
-              type: 'spring',
-              duration: 0.5,
-              delay: 2.25,
-            }}
-            viewport={{
-              once: true,
-              amount: 0.5,
-              root: ref,
-            }}
-          >
-            <Image src={poop} alt="poop" className="h-auto w-full" />
+            <Image src={weGotEm} alt="We got em!" className="h-auto w-full" />
           </motion.div>
         </div>
       </div>
@@ -196,4 +189,4 @@ const Step04 = ({ scrollRef: ref }: Props) => {
   );
 };
 
-export default Step04;
+export default Step05;

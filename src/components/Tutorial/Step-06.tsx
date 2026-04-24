@@ -4,8 +4,8 @@ import { motion, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
 import type React from 'react';
 
-import arrow from '../../public/phone-step-05-arrow.png';
-import message from '../../public/phone-step-05-message.png';
+import arrow from '../../../public/phone-step-05-arrow.png';
+import message from '../../../public/phone-step-05-message.png';
 
 interface Props {
   scrollRef?: React.RefObject<HTMLDivElement | null>;

@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/components/*": ["./components/*"],
-      "@/data/*": ["./data/*"],
-      "@/lib/*": ["./lib/*"],
-      "@/hooks/*": ["./hooks/*"],
-      "@/styles/*": ["./styles/*"]
+      "@/components/*": ["./src/components/*"],
+      "@/data/*": ["./src/data/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/styles/*": ["./src/styles/*"]
     },
     "target": "es2017",
     "lib": ["dom", "dom.iterable", "esnext"],
