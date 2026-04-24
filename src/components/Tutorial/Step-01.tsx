@@ -181,7 +181,7 @@ const Step01 = ({ scrollRef: ref }: Props) => {
         }}
       >
         Earn Chase Rewards:{' '}
-        <motion.div
+        <motion.span
           className="inline-block text-purple-500"
           initial={{
             opacity: shouldReduceMotion ? 1 : 0,
@@ -203,9 +203,56 @@ const Step01 = ({ scrollRef: ref }: Props) => {
             root: ref,
           }}
         >
-          {' '}
-          Discover, Dream, Redeem
-        </motion.div>{' '}
+          Discover,
+        </motion.span>{' '}
+        <motion.span
+          className="inline-block text-purple-500"
+          initial={{
+            opacity: shouldReduceMotion ? 1 : 0,
+            scale: shouldReduceMotion ? 1 : 4,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 200,
+            duration: 1,
+            delay: 1.5,
+          }}
+          viewport={{
+            once: true,
+            margin: '0px 100px -50px 0px',
+            root: ref,
+          }}
+        >
+          Dream,
+        </motion.span>{' '}
+        <motion.span
+          className="inline-block text-purple-500"
+          initial={{
+            opacity: shouldReduceMotion ? 1 : 0,
+            scale: shouldReduceMotion ? 1 : 4,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 200,
+            duration: 1,
+            delay: 1.75,
+          }}
+          viewport={{
+            once: true,
+            margin: '0px 100px -50px 0px',
+            root: ref,
+          }}
+        >
+          Redeem
+        </motion.span>{' '}
         for Date Night, Dinner or Travel
       </motion.div>
       <div className="absolute top-10 right-10 hidden h-[100%] w-2/3 lg:block lg:w-1/2 xl:w-2/5">
