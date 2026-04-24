@@ -100,7 +100,7 @@ const Step01 = ({ scrollRef: ref }: Props) => {
         scrollRef={ref}
       />
       <motion.div
-        className={`absolute ${isMobile ? 'top-[11%]' : 'top-[41%]'} left-0 flex h-auto w-[100%] items-center justify-center px-10 lg:w-3/5 lg:justify-start xl:w-4/5`}
+        className={`absolute ${isMobile ? 'top-[11%]' : 'top-[28%]'} left-0 flex h-auto w-[100%] items-center justify-center px-10 lg:w-3/5 lg:justify-start xl:w-4/5`}
         initial={{
           x: shouldReduceMotion ? 0 : -200,
           opacity: shouldReduceMotion ? 1 : 0,
@@ -129,7 +129,7 @@ const Step01 = ({ scrollRef: ref }: Props) => {
       </motion.div>
 
       <motion.div
-        className={`absolute left-0 ${isMobile ? 'top-[18%]' : 'top-[48%]'} flex w-[100%] items-center justify-center px-10 text-3xl font-bold uppercase leading-none text-white md:text-[4vw] lg:left-0 lg:w-3/5 lg:justify-start lg:text-[2.75vw] xl:w-4/5`}
+        className={`absolute left-0 ${isMobile ? 'top-[18%]' : 'top-[35%]'} flex w-[100%] items-center justify-center px-10 text-3xl font-bold uppercase leading-none text-white md:text-[4vw] lg:left-0 lg:w-3/5 lg:justify-start lg:text-[2.75vw] xl:w-4/5`}
         initial={{
           opacity: shouldReduceMotion ? 1 : 0,
           y: shouldReduceMotion ? 0 : 150,
@@ -160,7 +160,7 @@ const Step01 = ({ scrollRef: ref }: Props) => {
         />
       </motion.div>
       <motion.div
-        className="absolute left-0 top-[70%] w-auto px-10 text-center text-2xl font-bold uppercase leading-none text-white drop-shadow-md md:text-4xl lg:w-2/5 lg:text-left lg:text-[4vw] lg:leading-[0.8]"
+        className="absolute left-0 top-[55%] w-auto px-10 text-center text-2xl font-bold uppercase leading-none text-white drop-shadow-md md:text-4xl lg:w-2/5 lg:text-left lg:text-[3vw] lg:leading-[0.9]"
         initial={{
           opacity: shouldReduceMotion ? 1 : 0,
           y: shouldReduceMotion ? 0 : -150,
@@ -180,7 +180,7 @@ const Step01 = ({ scrollRef: ref }: Props) => {
           root: ref,
         }}
       >
-        Find All the Movies You{' '}
+        Earn Chase Rewards:{' '}
         <motion.div
           className="inline-block text-purple-500"
           initial={{
@@ -204,15 +204,15 @@ const Step01 = ({ scrollRef: ref }: Props) => {
           }}
         >
           {' '}
-          Love
+          Discover, Dream, Redeem
         </motion.div>{' '}
-        Wherever you are...
+        for Date Night, Dinner or Travel
       </motion.div>
       <div className="absolute top-10 right-10 hidden h-[100%] w-2/3 lg:block lg:w-1/2 xl:w-2/5">
         <div className="relative h-[100%] w-full">
           {icons.map((icon, index) => (
             <StepIcons
-              key={index}
+              key={`${icon.src}-${index}`}
               iconSrc={icon.src}
               iconAlt={icon.alt}
               iconWidth={128}
