@@ -1,0 +1,43 @@
+{
+  "name": "chase-web-guide",
+  "version": "1.0.0",
+  "description": "Branded web guide for Chase Bank.",
+  "author": "Doug Jones (cjboco.com)",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "deploy": "next build && touch out/.nojekyll && echo 'chase.picticular-instructions.com' > out/CNAME && git add out/ && git commit -m \"Deploy\" && git push origin `git subtree split --prefix out`:gh-pages --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Picticular/chase-web-guide.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Picticular/chase-web-guide/issues"
+  },
+  "dependencies": {
+    "framer-motion": "^12.38.0",
+    "next": "^16.2.4",
+    "react": "^19.2.5",
+    "react-confetti": "^6.4.0",
+    "react-dom": "^19.2.5",
+    "react-icons": "^5.6.0",
+    "react-use": "^17.6.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@tailwindcss/postcss": "^4.2.4",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "postcss": "^8.5.10",
+    "sass": "^1.99.0",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^5.9.3"
+  }
+}

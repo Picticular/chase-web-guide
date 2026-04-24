@@ -1,0 +1,209 @@
+@use "tailwindcss";
+
+@theme {
+  --color-purple-1000: #1F1A24;
+  --color-picticular-purple: #AE4ED8;
+  --background-image-phone: url('/phone-background.png');
+  --background-image-phone-island: url('/phone-clock-battery.png');
+  --z-50: 50;
+  --z-60: 60;
+  --z-70: 70;
+  --z-80: 80;
+  --z-90: 90;
+  --z-100: 100;
+}
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: black;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(#ae4ed8, 0.5);
+    border-radius: 100vh;
+    border: 0;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: rgba(#ae4ed8, 1);
+    }
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Biryani:wght@300;700&family=Montserrat:wght@300;700&display=swap");
+
+html,
+body,
+#__next {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Biryani", sans-serif;
+}
+
+header {
+  background: transparent;
+}
+
+#HowTo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(0deg, rgba(133, 63, 222, 0) 0%, rgba(133, 63, 222, 100%) 100%);
+  z-index: 50;
+}
+
+#swipeAnimation {
+  @keyframes a0_t {
+    0% {
+      transform: translate(58.3px, 111.2px) rotate(0deg) translate(-110.7px, -187.4px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    12.5% {
+      transform: translate(125.2px, 98.1px) rotate(12deg) translate(-110.7px, -187.4px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    27.5% {
+      transform: translate(58.3px, 111.2px) rotate(0deg) translate(-110.7px, -187.4px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    37.5% {
+      transform: translate(-47.4px, 99.2px) rotate(-14deg) translate(-110.7px, -187.4px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    52.5% {
+      transform: translate(59.7px, -25.8px) rotate(0deg) translate(-110.7px, -187.4px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    82.5% {
+      transform: translate(59.7px, 239.5px) rotate(1deg) translate(-110.7px, -187.4px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    100% {
+      transform: translate(58.3px, 111.2px) rotate(0deg) translate(-110.7px, -187.4px);
+    }
+  }
+  @keyframes a1_t {
+    0% {
+      transform: translate(110.7px, 291px) scale(1, 1) translate(-110.7px, -308px);
+    }
+    67.5% {
+      transform: translate(110.7px, 291px) scale(1, 1) translate(-110.7px, -308px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    82.5% {
+      transform: translate(110.7px, 291px) scale(1.8, 1.8) translate(-110.7px, -308px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    100% {
+      transform: translate(110.7px, 291px) scale(1, 1) translate(-110.7px, -308px);
+    }
+  }
+  @keyframes a2_t {
+    0% {
+      transform: translate(202.8px, 167.4px) scale(1, 1) translate(-202.8px, -184.4px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    12.5% {
+      transform: translate(202.8px, 167.4px) scale(1.8, 1.8) translate(-202.8px, -184.4px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    27.5% {
+      transform: translate(202.8px, 167.4px) scale(1, 1) translate(-202.8px, -184.4px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    40% {
+      transform: translate(202.8px, 167.4px) scale(1, 1) translate(-202.8px, -184.4px);
+    }
+    100% {
+      transform: translate(202.8px, 167.4px) scale(1, 1) translate(-202.8px, -184.4px);
+    }
+  }
+  @keyframes a3_t {
+    0% {
+      transform: translate(19.2px, 167.4px) scale(1, 1) translate(-19.2px, -184.4px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    27.5% {
+      transform: translate(19.2px, 167.4px) scale(1, 1) translate(-19.2px, -184.4px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    37.5% {
+      transform: translate(19.2px, 167.4px) scale(1.8, 1.8) translate(-19.2px, -184.4px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    50% {
+      transform: translate(19.2px, 167.4px) scale(1, 1) translate(-19.2px, -184.4px);
+    }
+    100% {
+      transform: translate(19.2px, 167.4px) scale(1, 1) translate(-19.2px, -184.4px);
+    }
+  }
+  @keyframes a4_t {
+    0% {
+      transform: translate(110.7px, 50.8px) scale(1, 1) translate(-110.7px, -67.8px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    40% {
+      transform: translate(110.7px, 50.8px) scale(1, 1) translate(-110.7px, -67.8px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    52.5% {
+      transform: translate(110.7px, 50.8px) scale(1.8, 1.8) translate(-110.7px, -67.8px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    67.5% {
+      transform: translate(110.7px, 50.8px) scale(1, 1) translate(-110.7px, -67.8px);
+    }
+    100% {
+      transform: translate(110.7px, 50.8px) scale(1, 1) translate(-110.7px, -67.8px);
+    }
+  }
+  @keyframes a5_t {
+    0% {
+      transform: translate(110.7px, 216px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    12.5% {
+      transform: translate(166.8px, 170px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    37.5% {
+      transform: translate(44.2px, 193.4px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    52.5% {
+      transform: translate(112.1px, 86.4px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    82.5% {
+      transform: translate(117.2px, 286.7px);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    100% {
+      transform: translate(110.7px, 216px);
+    }
+  }
+}

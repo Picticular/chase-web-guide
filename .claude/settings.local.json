@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "WebSearch",
+      "Bash(npm info:*)",
+      "Bash(ls:*)",
+      "Bash(npx next:*)",
+      "Bash(npx biome:*)",
+      "mcp__ide__getDiagnostics"
+    ]
+  }
+}
