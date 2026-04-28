@@ -9,6 +9,8 @@ import minus from '../../../public/phone-step-03-minus.png';
 import plus from '../../../public/phone-step-03-plus.png';
 import poop from '../../../public/phone-step-03-poop-shoot.png';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 interface Props {
   scrollRef?: React.RefObject<HTMLDivElement | null>;
 }
@@ -73,7 +75,7 @@ const Step04 = ({ scrollRef: ref }: Props) => {
         </motion.div>
         <div className="relative h-[65vh] w-auto pb-6 lg:h-[100%] lg:pb-0">
           <StepImage
-            imgSrc={'/phone-step-03.png'}
+            imgSrc={`${basePath}/phone-step-03.png`}
             altText={'Step 4 swipe phone image'}
             direction={'right'}
             className={'h-[100%] w-auto'}

@@ -3,6 +3,8 @@ import StepImage from '@/components/Tutorial/StepImage';
 import { motion, useReducedMotion } from 'framer-motion';
 import type React from 'react';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 interface Props {
   scrollRef?: React.RefObject<HTMLDivElement | null>;
 }
@@ -70,7 +72,7 @@ const Step07 = ({ scrollRef: ref }: Props) => {
           </div>
         </motion.div>
         <StepImage
-          imgSrc={'/phone-step-06.png'}
+          imgSrc={`${basePath}/phone-step-06.png`}
           altText={'Step 7 win free swag phone image'}
           direction={'left'}
           className={'h-[65vh] w-auto pb-6 lg:h-[100%] lg:pb-0'}

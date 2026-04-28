@@ -9,7 +9,9 @@
       "Bash(npx biome:*)",
       "mcp__ide__getDiagnostics",
       "Bash(mkdir -p src)",
-      "Bash(mv pages:*)"
+      "Bash(mv pages:*)",
+      "Bash(bun run:*)",
+      "Bash(grep -o icon-amc-logo[^\"\"]* /Volumes/Thunder/Develop/picticular/chase-web-guide/out/**/*.html)"
     ]
   }
 }

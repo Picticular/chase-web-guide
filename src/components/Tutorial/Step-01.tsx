@@ -10,79 +10,81 @@ interface Props {
   scrollRef?: React.RefObject<HTMLDivElement | null>;
 }
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const Step01 = ({ scrollRef: ref }: Props) => {
   const shouldReduceMotion = useReducedMotion();
   const winSize = useWindowDimensions();
   const isMobile = winSize.width < 768;
   const icons = [
     {
-      src: '/icon-amc-logo.svg',
+      src: `${basePath}/icon-amc-logo.svg`,
       alt: 'AMC icon',
       top: 'top-[8vh]',
       left: 'left-0',
     },
     {
-      src: '/icon-netflix-logo.svg',
+      src: `${basePath}/icon-netflix-logo.svg`,
       alt: 'Netflix icon',
       top: 'top-[8vh]',
       left: 'left-[12vh]',
     },
     {
-      src: '/icon-hbo-max-logo.svg',
+      src: `${basePath}/icon-hbo-max-logo.svg`,
       alt: 'HBO Max icon',
       top: 'top-[8vh]',
       left: 'left-[24vh]',
     },
     {
-      src: '/icon-apple-tv-logo.svg',
+      src: `${basePath}/icon-apple-tv-logo.svg`,
       alt: 'Apple TV icon',
       top: 'top-[20vh]',
       left: 'left-[5vh]',
     },
     {
-      src: '/icon-prime-video-logo.svg',
+      src: `${basePath}/icon-prime-video-logo.svg`,
       alt: 'Prime Video icon',
       top: 'top-[20vh]',
       left: 'left-[17vh]',
     },
     {
-      src: '/icon-laemmle-logo.svg',
+      src: `${basePath}/icon-laemmle-logo.svg`,
       alt: 'Laemmle icon',
       top: 'top-[20vh]',
       left: 'left-[29vh]',
     },
     {
-      src: '/icon-disney-plus-logo.svg',
+      src: `${basePath}/icon-disney-plus-logo.svg`,
       alt: 'Disney Plus icon',
       top: 'top-[32vh]',
       left: 'left-[9vh]',
     },
     {
-      src: '/icon-redbox-logo.svg',
+      src: `${basePath}/icon-redbox-logo.svg`,
       alt: 'Redbox icon',
       top: 'top-[32vh]',
       left: 'left-[21vh]',
     },
     {
-      src: '/icon-hulu-logo.svg',
+      src: `${basePath}/icon-hulu-logo.svg`,
       alt: 'Hulu icon',
       top: 'top-[32vh]',
       left: 'left-[33vh]',
     },
     {
-      src: '/icon-cinemark-logo.svg',
+      src: `${basePath}/icon-cinemark-logo.svg`,
       alt: 'Cinemark icon',
       top: 'top-[44vh]',
       left: 'left-[17vh]',
     },
     {
-      src: '/icon-vudu-logo.svg',
+      src: `${basePath}/icon-vudu-logo.svg`,
       alt: 'Vudu icon',
       top: 'top-[44vh]',
       left: 'left-[29vh]',
     },
     {
-      src: '/icon-plus-more.svg',
+      src: `${basePath}/icon-plus-more.svg`,
       alt: 'Plus more icon',
       top: 'top-[56vh]',
       left: 'left-[24vh]',
@@ -92,7 +94,7 @@ const Step01 = ({ scrollRef: ref }: Props) => {
   return (
     <Frame>
       <StepImage
-        imgSrc={'/phone-angle.png'}
+        imgSrc={`${basePath}/phone-angle.png`}
         altText={'Generic mobile phone'}
         direction={'left'}
         minWidth={'min-w-[69.8781vh]'}
@@ -120,7 +122,7 @@ const Step01 = ({ scrollRef: ref }: Props) => {
         }}
       >
         <Image
-          src={'/picticular-logo-text-all-white.svg'}
+          src={`${basePath}/picticular-logo-text-all-white.svg`}
           width={'1000'}
           height={'1000'}
           alt={'Picticular logo'}
@@ -152,7 +154,7 @@ const Step01 = ({ scrollRef: ref }: Props) => {
           Where <span className="text-purple-500">Your</span> Movies Live{' '}
         </span>
         <Image
-          src={'/picicular-logo-icon.svg'}
+          src={`${basePath}/picicular-logo-icon.svg`}
           width={'100'}
           height={'100'}
           alt={'Picticular logo'}

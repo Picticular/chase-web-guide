@@ -7,6 +7,8 @@ import type React from 'react';
 import arrow from '../../../public/phone-step-05-arrow.png';
 import message from '../../../public/phone-step-05-message.png';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 interface Props {
   scrollRef?: React.RefObject<HTMLDivElement | null>;
 }
@@ -77,7 +79,7 @@ const Step06 = ({ scrollRef: ref }: Props) => {
         </motion.div>
         <div className="relative h-[65vh] w-auto pb-6 lg:h-[100%] lg:pb-0">
           <StepImage
-            imgSrc={'/phone-step-05.png'}
+            imgSrc={`${basePath}/phone-step-05.png`}
             altText={'Step 6 follow cast and crew phone image'}
             direction={'right'}
             className={'h-[100%] w-auto'}

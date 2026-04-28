@@ -8,6 +8,8 @@ import dmOrText from '../../../public/phone-step-04-dm-or-text.png';
 import trailers from '../../../public/phone-step-04-trailers.png';
 import weGotEm from '../../../public/phone-step-04-we-got-em.png';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 interface Props {
   scrollRef?: React.RefObject<HTMLDivElement | null>;
 }
@@ -93,7 +95,7 @@ const Step05 = ({ scrollRef: ref }: Props) => {
         </motion.div>
         <div className="relative h-[65vh] w-auto pb-6 lg:h-[100%] lg:pb-0">
           <StepImage
-            imgSrc={'/phone-step-04.png'}
+            imgSrc={`${basePath}/phone-step-04.png`}
             altText={'Step 5 watch and share phone image'}
             direction={'left'}
             className={'h-[100%] w-auto'}

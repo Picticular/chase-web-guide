@@ -7,6 +7,8 @@ interface Props {
   scrollRef?: React.RefObject<HTMLDivElement | null>;
 }
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const Step03 = ({ scrollRef: ref }: Props) => {
   const shouldReduceMotion = useReducedMotion();
 
@@ -96,7 +98,7 @@ const Step03 = ({ scrollRef: ref }: Props) => {
         >
           <div className="relative h-[100%] w-auto">
             <Image
-              src={'/img-phone-frame.png'}
+              src={`${basePath}/img-phone-frame.png`}
               alt={'Step 3, seat selection phone screen image'}
               width={427}
               height={875}
@@ -145,7 +147,7 @@ const Step03 = ({ scrollRef: ref }: Props) => {
                   }}
                 >
                   <Image
-                    src={'/step-03-frame-01.jpeg'}
+                    src={`${basePath}/step-03-frame-01.jpeg`}
                     alt={'Step 3 phone image'}
                     width={427}
                     height={875}
@@ -176,7 +178,7 @@ const Step03 = ({ scrollRef: ref }: Props) => {
                   }}
                 >
                   <img
-                    src="/chase-web-guide/step-03-frame-01-spinner.gif"
+                    src={`${basePath}/step-03-frame-01-spinner.gif`}
                     width="24"
                     height="24"
                     className="mb-2"
@@ -208,7 +210,7 @@ const Step03 = ({ scrollRef: ref }: Props) => {
                 }}
               >
                 <Image
-                  src={'/step-03-frame-02.jpg'}
+                  src={`${basePath}/step-03-frame-02.jpg`}
                   alt={'Step 3, Frame 2 phone screen image'}
                   width={427}
                   height={875}
@@ -239,7 +241,7 @@ const Step03 = ({ scrollRef: ref }: Props) => {
                 }}
               >
                 <Image
-                  src={'/step-03-frame-02.1.jpg'}
+                  src={`${basePath}/step-03-frame-02.1.jpg`}
                   alt={'Step 3, Frame 2.1 phone screen image'}
                   width={427}
                   height={875}
@@ -270,7 +272,7 @@ const Step03 = ({ scrollRef: ref }: Props) => {
                 }}
               >
                 <Image
-                  src={'/step-03-frame-02.2.jpg'}
+                  src={`${basePath}/step-03-frame-02.2.jpg`}
                   alt={'Step 3, Frame 2.2 phone screen image'}
                   width={427}
                   height={875}
@@ -301,7 +303,7 @@ const Step03 = ({ scrollRef: ref }: Props) => {
                 }}
               >
                 <Image
-                  src={'/step-03-frame-02.3.jpg'}
+                  src={`${basePath}/step-03-frame-02.3.jpg`}
                   alt={'Step 3, Frame 2.3 phone screen image'}
                   width={427}
                   height={875}

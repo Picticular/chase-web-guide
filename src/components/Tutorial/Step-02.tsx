@@ -5,6 +5,8 @@ import type React from 'react';
 import { useState } from 'react';
 import Confetti from 'react-confetti';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 interface Props {
   scrollRef?: React.RefObject<HTMLDivElement | null>;
 }
@@ -84,7 +86,7 @@ const Step02 = ({ scrollRef: ref }: Props) => {
           Movie Night!
         </motion.div>
         <StepImage
-          imgSrc={'/phone-step-02.png'}
+          imgSrc={`${basePath}/phone-step-02.png`}
           altText={'Step 2 phone image'}
           direction={'right'}
           className={'h-[65vh] w-auto pb-6 lg:h-[100%] lg:pb-0'}

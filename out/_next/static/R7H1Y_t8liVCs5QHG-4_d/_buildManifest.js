@@ -1,16 +1,21 @@
 self.__BUILD_MANIFEST = {
   "/": [
-    "static/chunks/01zp52hpevfsn.js"
+    "static/chunks/04ydkmmu40rv9.js"
   ],
   "/_error": [
-    "static/chunks/0tu~9_gkaujfz.js"
+    "static/chunks/0y9z~lg0kcg.m.js"
   ],
   "/how-to": [
-    "static/chunks/15zw.ia8u04m7.js"
+    "static/chunks/0ji_~udzh7d7q.js"
   ],
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/chase-web-guide//_next/:path+",
+        "destination": "/chase-web-guide/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
