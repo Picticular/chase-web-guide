@@ -3,6 +3,8 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
+  basePath: '/chase-web-guide',
+  assetPrefix: '/chase-web-guide/',
   images: {
     unoptimized: true,
   },
