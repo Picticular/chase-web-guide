@@ -176,7 +176,7 @@ const Step03 = ({ scrollRef: ref }: Props) => {
                   }}
                 >
                   <img
-                    src="/step-03-frame-01-spinner.gif"
+                    src="/chase-web-guide/step-03-frame-01-spinner.gif"
                     width="24"
                     height="24"
                     className="mb-2"
